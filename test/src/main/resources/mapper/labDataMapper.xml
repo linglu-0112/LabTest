@@ -9,10 +9,11 @@
     </select>
     <!-- 插入platformData -->
     <insert id="insertPlatformData" parameterType="com.lab.test.pojo.PlatformData">
-        INSERT IGNORE INTO ${param1} (label_mac,label_type,date,temp,tempUnit,humidity,humidityUnit) 
+        INSERT IGNORE INTO ${param1} (label_mac,label_type,timestamps,sensorPhysicalId,cnName,Units,sensorPhysicalValue) 
         <foreach collection="PlatformData" open="values" item="item" separator=",">
             (
-            #{item.label_mac},#{item.label_type},#{item.date},#{item.temp},#{item.tempUnit},#{item.humidity},#{item.humidityUnit}
+            #{item.label_mac},#{item.label_type},#{item.timestamps},#{item.sensorPhysicalId},#{item.cnName},#{item.Units},#{item.sensorPhysicalValue}
             )
         </foreach>
+    </insert>
 </mapper>

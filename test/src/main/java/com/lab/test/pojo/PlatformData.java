@@ -2,20 +2,52 @@ package com.lab.test.pojo;
 import java.util.List;
 
 public class PlatformData {
+
+    private String sensorPhysicalId;
+
+    private String cnName;
+
+    private String Units;
+
+    private String sensorPhysicalValue;
+
+    public String getSensorPhysicalId() {
+        return sensorPhysicalId;
+    }
+
+    public void setSensorPhysicalId(String sensorPhysicalId) {
+        this.sensorPhysicalId = sensorPhysicalId;
+    }
+
+    public String getCnName() {
+        return cnName;
+    }
+
+    public void setCnName(String cnName) {
+        this.cnName = cnName;
+    }
+
+    public String getUnits() {
+        return Units;
+    }
+
+    public void setUnits(String units) {
+        Units = units;
+    }
+
+    public String getSensorPhysicalValue() {
+        return sensorPhysicalValue;
+    }
+
+    public void setSensorPhysicalValue(String sensorPhysicalValue) {
+        this.sensorPhysicalValue = sensorPhysicalValue;
+    }
+
     private String label_mac;
 
     private String label_type;
 
-    private String collectTime;
-
-    public String getCollectTime() {
-        return collectTime;
-    }
-
-    public void setCollectTime(String collectTime) {
-        this.collectTime = collectTime;
-    }
-
+    private String timestamps;
 
     private String temp;
 
@@ -41,6 +73,13 @@ public class PlatformData {
         this.humidityUnit = humidityUnit;
     }
 
+    public String getTimestamps() {
+        return timestamps;
+    }
+
+    public void setTimestamps(String timestamps) {
+        this.timestamps = timestamps;
+    }
 
     private List<DataBean> data;
 
@@ -86,21 +125,50 @@ public class PlatformData {
         this.humidity = humidity;
     }
 
+    
 
     public static class DataBean{
         private String label_mac;
         private String label_type;
-        private String collectTime;
+        private String timestamps;
         private String temp;
         private String humidity;
         private String tempUnit;
         private String humidityUnit; 
+        private String sensorPhysicalId;
+        private String cnName;
+        private String Units;
+        private String sensorPhysicalValue;
         
-        public String getCollectTime() {
-            return collectTime;
+        public String getSensorPhysicalId() {
+            return sensorPhysicalId;
         }
-        public void setCollectTime(String collectTime) {
-            this.collectTime = collectTime;
+        public void setSensorPhysicalId(String sensorPhysicalId) {
+            this.sensorPhysicalId = sensorPhysicalId;
+        }
+        public String getCnName() {
+            return cnName;
+        }
+        public void setCnName(String cnName) {
+            this.cnName = cnName;
+        }
+        public String getUnits() {
+            return Units;
+        }
+        public void setUnits(String units) {
+            Units = units;
+        }
+        public String getSensorPhysicalValue() {
+            return sensorPhysicalValue;
+        }
+        public void setSensorPhysicalValue(String sensorPhysicalValue) {
+            this.sensorPhysicalValue = sensorPhysicalValue;
+        }
+        public String getTimestamps() {
+            return timestamps;
+        }
+        public void setTimestamps(String timestamps) {
+            this.timestamps = timestamps;
         }
         
         public String getTempUnit() {
