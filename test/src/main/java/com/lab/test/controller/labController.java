@@ -22,14 +22,14 @@ public class labController {
         return "Hello World";
     }
 
-    @RequestMapping("/insertPlatformData/{select_TabName}")
-    public String insertPlatformData(@PathVariable String select_TabName){
+    @RequestMapping("/insertPlatformData/{select_TabName}/{tableName}")
+    public String insertPlatformData(@PathVariable String select_TabName,@PathVariable String tableName){
         try{
-            lds.insertPlatformData(select_TabName);
+            lds.insertPlatformData(select_TabName, tableName);
         }catch(Exception e){
             e.printStackTrace();
             return "error"; 
         }
-        return "查询成功！";
+        return "实验平台温湿度数据插入成功！";
     }
 }

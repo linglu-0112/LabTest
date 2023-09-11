@@ -6,11 +6,41 @@ public class PlatformData {
 
     private String label_type;
 
-    private String date;
+    private String collectTime;
+
+    public String getCollectTime() {
+        return collectTime;
+    }
+
+    public void setCollectTime(String collectTime) {
+        this.collectTime = collectTime;
+    }
+
 
     private String temp;
 
     private String humidity;
+
+    private String tempUnit;
+
+    private String humidityUnit;
+
+    public String getTempUnit() {
+        return tempUnit;
+    }
+
+    public void setTempUnit(String tempUnit) {
+        this.tempUnit = tempUnit;
+    }
+
+    public String getHumidityUnit() {
+        return humidityUnit;
+    }
+
+    public void setHumidityUnit(String humidityUnit) {
+        this.humidityUnit = humidityUnit;
+    }
+
 
     private List<DataBean> data;
 
@@ -38,13 +68,7 @@ public class PlatformData {
         this.label_type = label_type;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
+    
 
     public String getTemp() {
         return temp;
@@ -66,9 +90,31 @@ public class PlatformData {
     public static class DataBean{
         private String label_mac;
         private String label_type;
-        private String date;
+        private String collectTime;
         private String temp;
         private String humidity;
+        private String tempUnit;
+        private String humidityUnit; 
+        
+        public String getCollectTime() {
+            return collectTime;
+        }
+        public void setCollectTime(String collectTime) {
+            this.collectTime = collectTime;
+        }
+        
+        public String getTempUnit() {
+            return tempUnit;
+        }
+        public void setTempUnit(String tempUnit) {
+            this.tempUnit = tempUnit;
+        }
+        public String getHumidityUnit() {
+            return humidityUnit;
+        }
+        public void setHumidityUnit(String humidityUnit) {
+            this.humidityUnit = humidityUnit;
+        }
         public String getLabel_mac() {
             return label_mac;
         }
@@ -80,12 +126,6 @@ public class PlatformData {
         }
         public void setLabel_type(String label_type) {
             this.label_type = label_type;
-        }
-        public String getDate() {
-            return date;
-        }
-        public void setDate(String date) {
-            this.date = date;
         }
         public String getTemp() {
             return temp;
